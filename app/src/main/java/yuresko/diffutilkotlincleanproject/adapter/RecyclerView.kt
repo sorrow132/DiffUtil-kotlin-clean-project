@@ -1,4 +1,4 @@
 package yuresko.diffutilkotlincleanproject.adapter
 
-class RecyclerView() {
+class MyRecyclerView() {
 }
