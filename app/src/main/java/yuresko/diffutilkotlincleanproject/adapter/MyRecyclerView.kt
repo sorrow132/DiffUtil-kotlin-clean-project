@@ -7,6 +7,7 @@ import yuresko.diffutilkotlincleanproject.MyDataClass
 class MyRecyclerView(private val infoList: List<MyDataClass>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MyViewHolder(parent)
     }
