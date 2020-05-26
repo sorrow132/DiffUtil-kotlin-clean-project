@@ -1,6 +1,6 @@
 package yuresko.diffutilkotlincleanproject
 
-data class MyDataClass(
+data class Something(
     val id: Int,
     val name: String,
     val price: Int
