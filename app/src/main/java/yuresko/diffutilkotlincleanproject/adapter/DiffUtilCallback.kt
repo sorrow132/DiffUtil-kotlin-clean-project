@@ -3,20 +3,12 @@ package yuresko.diffutilkotlincleanproject.adapter
 import androidx.recyclerview.widget.DiffUtil
 import yuresko.diffutilkotlincleanproject.Something
 
-class DiffUtilCallback(
-    private var oldList: List<Something>,
-    private var newList: List<Something>
-) : DiffUtil.Callback() {
-
-    override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldList[oldItemPosition].id == newList[newItemPosition].id
+class DiffUtilCallback : DiffUtil.ItemCallback<Something>() {
+    override fun areItemsTheSame(oldItem: Something, newItem: Something): Boolean {
+        return oldItem is Something && newItem is Something
     }
 
-    override fun getOldListSize(): Int = oldList.size
-
-    override fun getNewListSize(): Int = newList.size
-
-    override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldList[oldItemPosition] == newList[newItemPosition]
+    override fun areContentsTheSame(oldItem: Something, newItem: Something): Boolean {
+        return oldItem == newItem
     }
 }

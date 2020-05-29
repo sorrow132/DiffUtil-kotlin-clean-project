@@ -1,5 +1,7 @@
 package yuresko.diffutilkotlincleanproject
 
+import io.reactivex.Observable
+
 class SomeRepository {
 
     private var arr: List<Something> = listOf(
@@ -20,10 +22,18 @@ class SomeRepository {
         (Something(14, "fourteen", 866))
     )
 
-    val arrSortedById: List<Something>
-        get() = arr.sortedBy { it.id }
+    fun sortById(): List<Something> {
+        return arr.sortedBy { it.id }
+    }
 
-    val arrSortedByPrice: List<Something>
-        get() = arr.sortedBy { it.price }
+    fun sortByPrice(): List<Something> {
+        return arr.sortedBy { it.price }
+    }
+
+    fun getItems(): Observable<List<Something>> {
+        return Observable.create { emitter ->
+            emitter.onNext(arr)
+        }
+    }
 
 }
