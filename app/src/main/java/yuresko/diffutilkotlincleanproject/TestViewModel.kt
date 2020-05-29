@@ -9,6 +9,7 @@ import io.reactivex.functions.Function3
 import io.reactivex.subjects.BehaviorSubject
 
 interface IViewModel {
+
     val items: LiveData<List<Something>>
 
     fun changePrice(index: Int, price: Int)

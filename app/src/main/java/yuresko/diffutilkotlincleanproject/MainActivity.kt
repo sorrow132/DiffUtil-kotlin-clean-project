@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import yuresko.diffutil_kotlin_clean_project.R
-import yuresko.diffutilkotlincleanproject.adapter.MyRecyclerView
+import yuresko.diffutilkotlincleanproject.adapter.RecyclerViewAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var button1: Button
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
 
     private val repository = SomeRepository()
-    private val adapter = MyRecyclerView()
+    private val adapter = RecyclerViewAdapter()
 
     private val viewModel: IViewModel = MyViewModel(repository)
 

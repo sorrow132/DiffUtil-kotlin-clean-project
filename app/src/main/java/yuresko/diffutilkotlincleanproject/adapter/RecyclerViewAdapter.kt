@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import yuresko.diffutilkotlincleanproject.Something
 
 
-class MyRecyclerView : ListAdapter<Something, RecyclerView.ViewHolder>(DiffUtilCallback()) {
+class RecyclerViewAdapter : ListAdapter<Something, RecyclerView.ViewHolder>(DiffUtilCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MyViewHolder(parent)
